@@ -1,0 +1,42 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
+// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
+
+generator client {
+  provider = "prisma-client-js"
+  output   = "../generated/prisma"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Users{
+  id String @id @default(uuid())
+  name String
+  email String @unique
+  password String
+  age Int
+  role user_roles @default(user)
+}
+
+// only these roles are allowed in org
+enum user_roles {
+  user
+  admin
+  super_admin
+}
+
+// user can only view products
+// admin can add new products and updata them
+// only super_admin can delete any product
+model Products{
+  id String @id @default(uuid())
+  name String
+  description String
+  availableColors String[] @default([])
+  price Decimal 
+}
