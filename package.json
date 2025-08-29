@@ -1,0 +1,23 @@
+{
+  "name": "tasks",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/masad-black/task_from_seniors.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/masad-black/task_from_seniors/issues"
+  },
+  "homepage": "https://github.com/masad-black/task_from_seniors#readme",
+  "description": "",
+  "dependencies": {
+    "socket.io": "^4.8.1"
+  }
+}

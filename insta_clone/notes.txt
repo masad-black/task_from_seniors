@@ -1,0 +1,30 @@
+permissions = [
+    {
+        name: post,
+        priviliges: [create, update]
+    },
+    {
+        name: comments,
+        priviliges: [delete]
+    },
+]
+
+permissions = {
+    post: [create, update, delete]
+    chat: [update, delete]
+}
+
+
+Posts 
+    
+Users
+
+Comments
+
+Followers
+
+Permissions
+
+Auth
+
+Chats
